@@ -41,12 +41,14 @@ http://127.0.0.1:8000/docs
 stroke-api/
 │
 ├── stroke_api/
+│   ├──__init__.py               
+│   ├──API_tuto.ipynb            
 │   ├── main.py                  # Point d'entrée, lancement de l'application
 │   ├── api.py                   # Routes API
 │   ├── filters.py               # Logique de filtrage des données
-│   ├── streamlit_API.py         # Application Streamlit pour visualisation et filtrage
-│   └── fichier_parquet.parquet  # Données
+│   └── streamlit_API.py         # Application Streamlit pour visualisation et filtrage
 │
+├── fichier_parquet.parquet      # Données
 ├── pyproject.toml               # Dépendances Poetry
 ├── poetry.lock                  # Lock file des dépendances
 └── README.md                    # Documentation
