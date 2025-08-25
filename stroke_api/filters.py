@@ -23,8 +23,10 @@ def filter_patient(stroke: Optional[int] = None,  max_age: Optional[int] = None,
     if max_age is not None:
         df = df[df["age"] <= max_age]
     
+
+    df["gender"] = df["gender"].astype(str).str.strip().str.lower()
     if gender is not None:
-        df = df[df["gender"].str.lower() == gender]
+        df = df[df["gender"] == gender.lower()]
     
     return df.to_dict('records')
 
