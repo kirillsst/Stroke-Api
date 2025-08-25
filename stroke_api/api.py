@@ -26,12 +26,20 @@ def get_patient_by_id(patient_id: int):
 # TODO Ajout de la route stats
 
 @router.get("/stats/")
-def get_stats(stats):
+def get_stats():
     df = filters.statistic()
+
+    if df is None or df.empty:
+        raise HTTPException(status_code=404, detail="No data")
 
     stats = {
         "total_patients": len(df),
-        "stroke_count": df['stroke'].sum(),
+        "stroke_count": int(df['stroke'].sum()),
+        "stroke_rate": round((df['stroke'].sum() / len(df)) * 100, 2),
         "average_age": round(df['age'].mean(), 2),
+        "gender_distribution": df['gender'].value_counts().to_dict()
     }
+
     return stats
+
+#poetry run fastapi dev stroke_api/main.py
