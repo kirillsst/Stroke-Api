@@ -21,7 +21,7 @@ cd stroke_api
 poetry install
 ```
 
-### 3. Lancer le serveur
+### 3. Lancer le serveur FastAPI
 
 ```bash
 poetry run fastapi dev stroke_api/main.py
