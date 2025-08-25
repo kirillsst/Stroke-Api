@@ -1,24 +1,67 @@
-Stroke data project
-===================
+# 🩺 Stroke Dataset API
 
-Ce projet contient les fichiers nécessaires au brief Stroke data - Développement d'une API REST et visualisation.
+API pour travailler avec les données des patients.
+Implémenté avec **FastAPI**, il permet le filtrage des données, la consultation des statistiques et des informations sur des patients individuels.
 
-============================================================================
+---
 
-Je commence par charger le fichier CSV, puis je regarde head() et info().
-Ensuite, je vérifie les valeurs manquantes.
-Je change les types si besoin avec astype().
-Je vérifie s’il y a des doublons et je les supprime si nécessaire.
-Je remplis, supprime ou remplace les valeurs NaN.
-Enfin, j’utilise describe() pour voir les détails.
+## 🚀 Installation et lancement
 
-============================================================================
+### 1. Cloner le repository
 
-Différence principale avec CSV :
-Parquet est binaire et compressé, alors que CSV est texte brut. Parquet est donc plus rapide à lire/écrire et prend moins de place.
+```bash
+git clone -b Kirill https://github.com/nabil-ghazali/stroke-api.git
+cd stroke-api
+cd stroke_api
+```
 
-Quand l’utiliser ?
-Idéal quand on travaille avec beaucoup de données, surtout en data science ou big data.
+### 2. Installer les dépendances (Poetry)
 
-Pourquoi adapté aux gros volumes ?
-Parce qu’il est colonnes par colonnes, compressé, et permet de lire seulement ce qu’on a besoin (pas tout le fichier comme CSV).
+```bash
+poetry install
+```
+
+### 3. Lancer le serveur
+
+```bash
+poetry run fastapi dev stroke_api/main.py
+```
+
+Le serveur sera accessible à l'adresse :
+
+```
+http://127.0.0.1:8000/docs
+```
+
+---
+
+## 📂 Structure du projet
+
+```
+stroke-api/
+│
+├── stroke_api/
+│   ├── main.py                  # Point d'entrée, lancement de l'application
+│   ├── api.py                   # Routes API
+│   ├── filters.py               # Logique de filtrage des données
+│   └── fichier_parquet.parquet  # Données
+│
+├── pyproject.toml               # Dépendances Poetry
+├── poetry.lock                  # Lock file des dépendances
+└── README.md                    # Documentation
+```
+
+## 🔗 Endpoints disponibles
+
+| Méthode | Route                    | Description                     | Paramètres                    |
+| ------- | ------------------------ | ------------------------------- | ----------------------------- |
+| GET     | `/patients/`             | Liste des patients avec filtres | `gender`, `stroke`, `max_age` |
+| GET     | `/patients/{patient_id}` | Détails d'un patient spécifique | `patient_id`                  |
+| GET     | `/stats/`                | Statistiques globales           | —                             |
+| GET     | `/docs`                  | Swagger UI pour tester l'API    | —                             |
+
+## 🛠️ Technologies
+
+* [FastAPI](https://fastapi.tiangolo.com/)
+* [Pandas](https://pandas.pydata.org/)
+* [Poetry](https://python-poetry.org/)

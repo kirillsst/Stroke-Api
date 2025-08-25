@@ -1,10 +1,10 @@
 from fastapi import APIRouter, HTTPException
 from stroke_api import filters
+from fastapi import FastAPI
 
 router = APIRouter()
 
-
-@router.get("/")
+@router.get("/docs")
 def read_root():
     return {"message": "Bienvenue sur l'API Stroke Prediction !"}
 

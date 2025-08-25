@@ -41,3 +41,4 @@ def get_id(patient_id: int):
     
 def statistic():
     return stroke_data_df.copy()
+#Renvoie une copie du DataFrame pour les statistiques.
