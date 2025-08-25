@@ -33,6 +33,17 @@ Le serveur sera accessible à l'adresse :
 http://127.0.0.1:8000/docs
 ```
 
+### 4. Lancer l'application Streamlit
+```bash
+poetry run streamlit run stroke_api/streamlit_API.py
+```
+
+Le serveur sera accessible à l'adresse :
+
+```
+http://localhost:8501/
+```
+
 ---
 
 ## 📂 Structure du projet
