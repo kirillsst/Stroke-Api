@@ -42,7 +42,7 @@ stroke-api/
 │
 ├── stroke_api/
 │   ├──__init__.py               
-│   ├──API_tuto.ipynb            
+│   ├── API_tuto.ipynb            
 │   ├── main.py                  # Point d'entrée, lancement de l'application
 │   ├── api.py                   # Routes API
 │   ├── filters.py               # Logique de filtrage des données
@@ -68,3 +68,4 @@ stroke-api/
 * [FastAPI](https://fastapi.tiangolo.com/)
 * [Pandas](https://pandas.pydata.org/)
 * [Poetry](https://python-poetry.org/)
+* [Streamlit](https://streamlit.io/)
