@@ -43,9 +43,11 @@ st.write(f"{len(data)} patients trouvés")
 if not data.empty:
     st.dataframe(data)
 
-    # Visualisation de la distribution des âges
     st.subheader("Distribution des âges")
-    st.bar_chart(data["age"])
+
+    # Créer un histogramme de la colonne 'age'
+    age_counts = data["age"].value_counts().sort_index()  # compte des occurrences par âge
+    st.bar_chart(age_counts)
 
     # Distribution par sexe
     if "gender" in data.columns:

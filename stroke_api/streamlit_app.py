@@ -5,3 +5,5 @@ st.write("Bienvenue dans l'application de visualisation et d'analyse des donnée
 
 st.write("Utilisez le menu à gauche pour naviguer entre les pages :")
 st.write("- Filtrage des patients")
+st.write("- Insights")
+st.write("- Search by ID")
