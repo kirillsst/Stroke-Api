@@ -24,7 +24,7 @@ poetry install
 ### 3. Lancer le serveur FastAPI
 
 ```bash
-poetry run fastapi dev stroke_api/main.py
+poetry run fastapi dev main.py
 ```
 
 Le serveur sera accessible à l'adresse :
@@ -35,7 +35,7 @@ http://127.0.0.1:8000/docs
 
 ### 4. Lancer l'application Streamlit
 ```bash
-poetry run streamlit run stroke_api/streamlit_API.py
+poetry run streamlit run streamlit_app.py
 ```
 
 Le serveur sera accessible à l'adresse :
