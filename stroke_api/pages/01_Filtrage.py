@@ -58,3 +58,4 @@ if not data.empty:
         st.bar_chart(data["stroke"].value_counts())
 else:
     st.write("Aucun patient trouvé pour ce filtre.")
+

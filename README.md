@@ -52,7 +52,12 @@ http://localhost:8501/
 stroke-api/
 │
 ├── stroke_api/
-│   ├──__init__.py               
+│   ├── data/
+│       ├── healthcare-dataset-stroke-data.csv
+│   ├──pages/
+│       ├── 01_Filtrage.py
+│       ├── 02_Stats.py
+│   ├── __init__.py               
 │   ├── API_tuto.ipynb            
 │   ├── main.py                  # Point d'entrée, lancement de l'application
 │   ├── api.py                   # Routes API
