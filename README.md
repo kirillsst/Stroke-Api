@@ -61,7 +61,7 @@ stroke-api/
 │   ├── main.py                  # Point d'entrée, lancement de l'application
 │   ├── api.py                   # Routes API
 │   ├── filters.py               # Logique de filtrage des données
-│   └── streamlit_API.py         # Application Streamlit pour visualisation et filtrage
+│   └── streamlit_app.py         # Application Streamlit pour visualisation et filtrage
 │
 ├── fichier_parquet.parquet      # Données
 ├── pyproject.toml               # Dépendances Poetry
