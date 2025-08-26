@@ -11,6 +11,9 @@ Implémenté avec **FastAPI**, il permet le filtrage des données, la consultati
 
 ```bash
 git clone -b Kirill https://github.com/nabil-ghazali/stroke-api.git
+```
+Accéder au projet
+```bash
 cd stroke-api
 cd stroke_api
 ```
