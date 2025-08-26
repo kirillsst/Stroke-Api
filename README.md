@@ -56,6 +56,8 @@ stroke-api/
 │       ├── healthcare-dataset-stroke-data.csv
 │   ├──pages/
 │       ├── 01_Filtrage.py
+│       ├── 02_Insight.py
+│       ├── 03_SearchID.py
 │   ├── __init__.py               
 │   ├── API_tuto.ipynb            
 │   ├── main.py                  # Point d'entrée, lancement de l'application
